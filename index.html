@@ -291,8 +291,7 @@ function fetchHostelData(city, area, page) {
         box.innerHTML = `
           <p><strong>S.No:</strong> ${(page - 1) * rowsPerPage + index + 1}</p>
           <p><strong>Hostel Name:</strong> ${row.hostelName}</p>
-          <p><strong>Area:</strong> ${row.area}</p>
-          <p><strong>City:</strong> ${city}</p> <!-- Set city directly from the variable -->
+          <p><strong>⛳Area:</strong> ${row.area}</p>,  <p><strong>City:</strong> ${city}</p> <!-- Set city directly from the variable -->
 	  <p><strong> ☎️ </strong> ${row.phoneNumber}</p> 
          
           <a href="tel:${row.phoneNumber}" class="call-button">Call</a>

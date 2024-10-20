@@ -28,11 +28,15 @@
             text-align: center;
         }
 
-        .container {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-        }
+           .container {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+      text-align: center;
+      width: 300px;
+    }
 
         label {
             font-size: 24px;
@@ -194,7 +198,7 @@
 
 
 
-  <div class="container">
+    <div class="container">
     <label for="citySelect">Select City:</label>
     <select id="citySelect">
       <option value="">--Select a City--</option>

@@ -55,19 +55,25 @@
             margin-right: 10px;
         }
 
-        #fetchButton {
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: #0d47a1;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    #fetchButton {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #0d47a1;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
 
-        #fetchButton:hover {
-            background-color: #1565c0;
-        }
+    #fetchButton:hover {
+        background-color: #1565c0;
+    }
+
+    /* New style for button after click */
+    #fetchButton.clicked {
+        background-color: #00C853; /* Change to desired color after click */
+    }
 
         .box {
     position: relative;
@@ -221,7 +227,7 @@
     <button id="fetchButton" disabled>Fetch Data</button>
   </div>
 
-  <div id="loadingMessage" style="display: none; font-size: 18px; color: #007bff;">Please wait, loading data...</div>
+  <div id="loadingMessage" style="display: none; font-size: 18px; color: #FFFFFF;">Please wait, loading data...</div>
   
   <div class="boxes-container" id="hostelBoxes"></div>
 
@@ -297,7 +303,8 @@ function fetchHostelData(city, area, page) {
           <p><strong>Hostel Name:</strong> ${row.hostelName}</p>
           <p><strong>Area:</strong> ${row.area}</p>
 	  <p><strong>City:</strong> ${city}</p> <!-- Set city directly from the variable -->
-	  <p><strong> ☎️ </strong> ${row.phoneNumber}</p> 
+	  <!-- <p><strong> ☎️ </strong> ${row.phoneNumber}</p> -->
+
          
           <a href="tel:${row.phoneNumber}" class="call-button">Call</a>
           <a href="https://wa.me/${phoneNumberFormatted}" class="whatsapp-button" target="_blank">WhatsApp</a>
@@ -374,7 +381,11 @@ function fetchHostelData(city, area, page) {
 
     type(); // Start the typing effect
 </script>
-
+    <script>
+        document.getElementById('fetchButton').addEventListener('click', function() {
+            this.classList.add('clicked');
+        });
+    </script>
 
 </body>
 </html>

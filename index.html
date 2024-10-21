@@ -7,16 +7,14 @@
   <link rel="stylesheet" href="styles.min.css"> <!-- External CSS for caching and reduced size -->
     <style>
         /* Minified CSS for faster loading */
- /* Minified CSS for faster loading */
-        body {
+body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: url('https://i.pinimg.com/originals/12/b2/3a/12b23a7752e8a7a4464c1ff5e596237f.gif') no-repeat center center fixed;
-    background-size: cover;
+    background-color: black; /* Set the background to black */
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
@@ -79,26 +77,39 @@
         background-color: #00C853; /* Change to desired color after click */
     }
 
-        .box {
+       /* Parent container to center the box */
+html, body {
+    height: 100%; /* Ensure full height for centering */
+    margin: 0; /* Remove default margin */
+}
+
+body {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: #000; /* Optional: set a background color */
+}
+
+.box {
     position: relative;
     background: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
-    backdrop-filter: blur(10px); /* Blur effect to create frosty glass look */
+    backdrop-filter: blur(10px); /* Blur effect for frosty glass look */
     -webkit-backdrop-filter: blur(10px); /* Safari support */
     padding: 20px;
-    margin: 10px 10px 10px 0;
-    width: 250px;
+    width: 250px; /* Fixed width */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     border-radius: 15px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: Add a border to enhance the frosty effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: border for effect */
 }
 
-        .box p {
-            margin: 5px 0;
-            font-size: 16px;
-            color: #FFFFFF;
-        }
+.box p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #FFFFFF; /* White text for visibility */
+}
+
 
         .call-button,
         .whatsapp-button {

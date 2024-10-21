@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.min.css"> <!-- External CSS for caching and reduced size -->
     <style>
         /* Minified CSS for faster loading */
-        body {
+  body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
@@ -15,11 +15,13 @@
     justify-content: center;
     min-height: 100vh;
     background: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1397b567990797.5b6c8baca0b61.gif') no-repeat center center fixed;
-    background-size: cover;
+    background-size: contain;
+    background-attachment: fixed;
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
 }
+
         .tagline {
             font-size: 48px;
             font-weight: bold;

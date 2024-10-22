@@ -384,10 +384,16 @@ function fetchHostelData(city, area, page) {
     }
 
     type(); // Start the typing effect
-</script>
-    <script>
-        document.getElementById('fetchButton').addEventListener('click', function() {
-            this.classList.add('clicked');
+<script>
+        document.getElementById("fetchButton").addEventListener("click", function() {
+            // Your existing fetch logic can go here
+
+            // Reset background styles
+            document.body.style.background = "url('https://cdn.svgator.com/images/2021/08/interactive-animations.svg') no-repeat center center fixed";
+            document.body.style.backgroundSize = "cover";
+
+            // Add clicked class for button effect
+            this.classList.add("clicked");
         });
     </script>
 

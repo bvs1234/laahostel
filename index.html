@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +14,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: url('https://cdn.svgator.com/images/2023/03/svg-animated-loaders.svg') no-repeat center center fixed;
-    background-size: cover; /* Ensures the background image covers the entire page */
+    background: url('https://i.pinimg.com/originals/12/b2/3a/12b23a7752e8a7a4464c1ff5e596237f.gif') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 20px;
@@ -304,7 +302,7 @@ function fetchHostelData(city, area, page) {
         const box = document.createElement('div');
         box.classList.add('box');
         box.innerHTML = `
-          <p><strong>-</strong> ${(page - 1) * rowsPerPage + index + 1}-</p>
+          <p><strong>#️⃣</strong> ${(page - 1) * rowsPerPage + index + 1}</p>
           <p><strong>Hostel Name:</strong> ${row.hostelName}</p>
           <p><strong>Area:</strong> ${row.area}</p>
 	  <p><strong>City:</strong> ${city}</p> <!-- Set city directly from the variable -->
@@ -385,16 +383,10 @@ function fetchHostelData(city, area, page) {
     }
 
     type(); // Start the typing effect
-<script>
-        document.getElementById("fetchButton").addEventListener("click", function() {
-            // Your existing fetch logic can go here
-
-            // Reset background styles
-            document.body.style.background = "url('https://cdn.svgator.com/images/2021/08/interactive-animations.svg') no-repeat center center fixed";
-            document.body.style.backgroundSize = "cover";
-
-            // Add clicked class for button effect
-            this.classList.add("clicked");
+</script>
+    <script>
+        document.getElementById('fetchButton').addEventListener('click', function() {
+            this.classList.add('clicked');
         });
     </script>
 
